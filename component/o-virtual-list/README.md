@@ -2,7 +2,7 @@
 
 基于uniapp实现的虚拟列表
 
-**[组件链接]()**
+**[组件链接](https://github.com/GeHYang/o-ui/tree/master/component/o-virtual-list)**
 
 ### 演示
 
