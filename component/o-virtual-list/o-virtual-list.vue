@@ -64,6 +64,7 @@ export default {
 				this.getVisualList1();
 			})
 		} else {
+			// 数据初始化
 			this.listData = this.listData.map((item, index) => {
 				return {
 					index,
@@ -72,19 +73,34 @@ export default {
 			})
 			this.$nextTick(async () => {
 				let sView = await this.querySelector(".s-view");
+				// 根据滑动视图高度计算页面承载大小
 				this.endIndex = Math.ceil(sView.height / this.itemHeight) + 2;
 				this.getVisualList();
 			})
 		}
   },
 	methods: {
+		// 滚动监听
+		scrollEvent(e){
+			this.scrollTop = e.detail.scrollTop;
+			if(!this.estimatedHeight){
+				this.getVisualList();
+			}
+			else {
+				this.startIndex = this.getStartIndex(this.scrollTop);
+				this.getVisualList1();
+			}
+		},
+		// 固定高度展示列表
 		async getVisualList(){
+			// 计算起点下标
 			this.startIndex = Math.floor(this.scrollTop / this.itemHeight);
-			let endIndex = Math.ceil(this.scrollTop / this.itemHeight) + 2;
-			endIndex = Math.max(this.endIndex, endIndex);
-			this.visualList = this.listData.slice(this.startIndex, this.startIndex + endIndex);
+			// 截取数据
+			this.visualList = this.listData.slice(this.startIndex, this.startIndex + this.endIndex);
+			// 设置偏移
 			this.top = this.scrollTop - (this.scrollTop % this.itemHeight)
 		},
+		// 动态高度展示列表
 		async getVisualList1(){
 			let sView = await this.querySelector(".s-view");
 			let endIndex = Math.ceil(sView.height / this.estimatedHeight);
@@ -96,16 +112,7 @@ export default {
 			})
 
 		},
-		scrollEvent(e){
-			this.scrollTop = e.detail.scrollTop;
-			if(!this.estimatedHeight){
-				this.getVisualList();
-			}
-			else {
-				this.startIndex = this.getStartIndex(this.scrollTop);
-				this.getVisualList1();
-			}
-		},
+		// 获取节点信息
 		querySelector(name){
 			return new Promise((res) => {
 				const query = uni.createSelectorQuery().in(this);
@@ -118,6 +125,7 @@ export default {
 				}).exec();
 			})
 		},
+		// 初始化动态高度列表数据
 		initDataList(list){
 			return list.map((item, index) => {
 				return {
@@ -129,17 +137,20 @@ export default {
 				}
 			})
 		},
+		// 获取起点下标
 		getStartIndex(scrollTop){
 			// let item = this.listData.find(i => i && i.bottom > scrollTop);
 			let item = this.binarySearch(this.listData, scrollTop);
 			return item.index;
 		},
+		// 二分查找起点信息
 		binarySearch(list, scrollTop){
 			let start = 0;
 			let end = list.length - 1;
 			let maxIndex = -1;
 			while(start <= end){
 				let min = (start + end) >> 1;
+				// 如果相等，则返回
 				if(list[min].bottom == scrollTop){
 					return list[min + 1];
 				} else if(list[min].bottom < scrollTop){
@@ -153,19 +164,21 @@ export default {
 			}
 			return list[maxIndex];
 		},
+		// 更新列表信息
 		updatePosition(){
 			return new Promise((res) => {
 				this.visualList.map(async (item, index) => {
+					// 节点获取
 					let node = await this.querySelector(".visual_" + index);
 					let oldHeight = item.height;
 					let newHeight = node.height;
+					// 高度偏差
 					const diff = newHeight - oldHeight;
 					if(diff){
 						this.listData[item.index].height = newHeight;
 						this.listData[item.index].bottom += diff;
-						// 减少执行次数
-						let count = Math.min(item.index + this.visualList.length * 1.5, this.listData.length);
-						for(let i = item.index + 1; i < count; i++){
+						// 往后修改top及bottom信息
+						for(let i = item.index + 1; i < this.listData.length; i++){
 							this.listData[i].top = this.listData[i-1].bottom;
 							this.listData[i].bottom += diff;
 						}
@@ -196,6 +209,7 @@ export default {
   .s-view {
 		position: relative;
     height: 100%;
+		padding: 5px 0;
 		width: 100%;
 		.visual-box {
 			position: absolute;
