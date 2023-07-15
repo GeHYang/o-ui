@@ -41,6 +41,10 @@
 |  placeholder   |                        输入框提示文字                        | String  | 请输入内容 |    -    |
 |   emojiStyle   |                          表情框样式                          | Object  |     {}     | css属性 |
 |     resize     | 输入框是否顶起页面，即如果页面设置`softinputMode`为`adjustResize`就设置当前值为`true` | Boolean |   false    |  true   |
+|     voice      |                         开启语音功能                         | Boolean |   false    |  true   |
+|  maxRecordLen  |                         最大语音时长                         | Number  |     59     |    -    |
+|  minRecordLen  |                         最小语音时长                         | Number  |     1      |   >1    |
+|    offsetY     |                     按住说话滑动取消距离                     | Number  |     40     |    -    |
 
 #### Events
 
@@ -48,12 +52,15 @@
 | :--------: | :----------------------------------------------------------: | :----: | :----------------: |
 |   change   | 点击默认的发送按钮时触发，返回输入的内容HTML代码、解析后的文本以及文本长度 | Object | {text,html,length} |
 | clickEmoji |                       点击的emoji信息                        | Object |         -          |
+|   record   | 语音结束触发，返回值：`cancel`: Boolean，是否取消；`duration`: Number，语音时长；`result`: 语音信息，临时语音文件 | Object |         -          |
 
 #### Slot
 
-|  名称  |                         说明                         |
-| :----: | :--------------------------------------------------: |
-| prefix |                    输入框前置插槽                    |
-| suffix | 输入框后置插槽，可以自定义图标，表情包盒子不发生变化 |
-| r-btn  |        按钮位置插槽自定义后change事件不起作用        |
+|      名称      |                         说明                         |
+| :------------: | :--------------------------------------------------: |
+|     prefix     |                    输入框前置插槽                    |
+|     suffix     | 输入框后置插槽，可以自定义图标，表情包盒子不发生变化 |
+|     r-btn      |        按钮位置插槽自定义后change事件不起作用        |
+|   voice-btn    |                   按住说话按钮插槽                   |
+| record-overlay |                  按住说话遮罩层插槽                  |
 

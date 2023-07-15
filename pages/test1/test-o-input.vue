@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<!-- 测试input -->
-		<o-input :resize="true" @change="changeIn"></o-input>
+		<o-input :resize="true" @change="changeIn" :voice="true" @record="record"></o-input>
 		<view class="showInput">
 			<rich-text v-for="(item, index) in inText" :key="index" class="richText" :nodes="item"></rich-text>
 		</view>
@@ -23,6 +23,9 @@ export default {
 	methods: {
 		changeIn({text, html, length}){
 			this.inText.push(html);
+		},
+		record(result){
+			console.log(result);
 		}
 	}
 }

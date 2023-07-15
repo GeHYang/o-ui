@@ -1,14 +1,14 @@
 <template>
 	<view class="box">
-		<test-o-virtual-list>
-		</test-o-virtual-list>
+		<test-o-input></test-o-input>
 	</view>
 </template>
 
 <script>
+import TestOInput from '../test1/test-o-input.vue'
 import TestOVirtualList from '../test1/test-o-virtual-list.vue'
 export default {
-	components: {TestOVirtualList},
+	components: {TestOVirtualList, TestOInput},
 	data() {
 		return {}
 	},
@@ -17,6 +17,6 @@ export default {
 
 <style lang="scss" scoped>
 .box {
-	overflow: hidden;
+	// overflow: hidden;
 }
 </style>

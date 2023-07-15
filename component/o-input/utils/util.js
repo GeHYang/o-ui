@@ -1,4 +1,4 @@
-const {emojiList} = require("./o-emoji/emoji")
+const {emojiList} = require("../o-emoji/emoji")
 
 /**
  * 解析富文本内容
