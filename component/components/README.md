@@ -53,7 +53,6 @@
 |   change   | 点击默认的发送按钮时触发，返回输入的内容HTML代码、解析后的文本以及文本长度 | Object | {text,html,length} |
 | clickEmoji |                       点击的emoji信息                        | Object |         -          |
 |   record   | 语音结束触发，返回值：`cancel`: Boolean，是否取消；`duration`: Number，语音时长；`result`: 语音信息，临时语音文件 | Object |         -          |
-|   cut-mode   | 点击默认左边图标时触发，返回值为转换的模式，`voice`：语音，`keyboard`：键盘 | String |         `voice`/`keyboard`          |
 
 #### Slot
 

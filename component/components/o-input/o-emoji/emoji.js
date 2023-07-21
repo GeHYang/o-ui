@@ -1,0 +1,381 @@
+export const emojiList = [{
+	"src": "https://emojidaquan.com/Pics/72/apple/grinning-face_1f600.png",
+	"name": "笑容满面",
+	"regName": "[笑容满面]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-open-mouth_1f603.png",
+	"name": "大眼睛咧嘴笑着的脸",
+	"regName": "[大眼睛咧嘴笑着的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-open-mouth-and-smiling-eyes_1f604.png",
+	"name": "微笑的脸和微笑的眼睛",
+	"regName": "[微笑的脸和微笑的眼睛]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/grinning-face-with-smiling-eyes_1f601.png",
+	"name": "笑容可掬的脸",
+	"regName": "[笑容可掬的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png",
+	"name": "咧嘴眯眼的脸",
+	"regName": "[咧嘴眯眼的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-open-mouth-and-cold-sweat_1f605.png",
+	"name": "满脸汗水的笑容",
+	"regName": "[满脸汗水的笑容]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/rolling-on-the-floor-laughing_1f923.png",
+	"name": "在地板上滚来滚去大笑",
+	"regName": "[在地板上滚来滚去大笑]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-tears-of-joy_1f602.png",
+	"name": "喜极而泣",
+	"regName": "[喜极而泣]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/slightly-smiling-face_1f642.png",
+	"name": "略带微笑的脸",
+	"regName": "[略带微笑的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/upside-down-face_1f643.png",
+	"name": "颠倒的脸",
+	"regName": "[颠倒的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/winking-face_1f609.png",
+	"name": "眨眼的脸",
+	"regName": "[眨眼的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-smiling-eyes_1f60a.png",
+	"name": "微笑的脸和微笑的眼睛",
+	"regName": "[微笑的脸和微笑的眼睛]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-halo_1f607.png",
+	"name": "带光环的笑脸",
+	"regName": "[带光环的笑脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-heart-shaped-eyes_1f60d.png",
+	"name": "带着心眼的笑脸",
+	"regName": "[带着心眼的笑脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/grinning-face-with-star-eyes_1f929.png",
+	"name": "星光闪耀",
+	"regName": "[星光闪耀]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-throwing-a-kiss_1f618.png",
+	"name": "吹出一个吻的脸、飞吻",
+	"regName": "[飞吻]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/kissing-face_1f617.png",
+	"name": "亲吻的脸",
+	"regName": "[亲吻的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/white-smiling-face_263a.png",
+	"name": "笑脸",
+	"regName": "[笑脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/kissing-face-with-closed-eyes_1f61a.png",
+	"name": "闭着眼睛亲吻脸",
+	"regName": "[闭着眼睛亲吻脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/kissing-face-with-smiling-eyes_1f619.png",
+	"name": "用微笑的眼睛亲吻脸",
+	"regName": "[用微笑的眼睛亲吻脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-savouring-delicious-food_1f60b.png",
+	"name": "馋嘴的笑脸",
+	"regName": "[馋嘴的笑脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-stuck-out-tongue_1f61b.png",
+	"name": "有舌头的脸",
+	"regName": "[有舌头的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-stuck-out-tongue-and-winking-eye_1f61c.png",
+	"name": "伸舌头眨眼的脸",
+	"regName": "[伸舌头眨眼的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/grinning-face-with-one-large-and-one-small-eye_1f92a.png",
+	"name": "滑稽的脸",
+	"regName": "[滑稽的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-stuck-out-tongue-and-tightly-closed-eyes_1f61d.png",
+	"name": "眯眼伸舌头笑脸",
+	"regName": "[眯眼伸舌头笑脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/money-mouth-face_1f911.png",
+	"name": "张嘴眼睛冒钱脸",
+	"regName": "[张嘴眼睛冒钱脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/hugging-face_1f917.png",
+	"name": "紧抱的脸",
+	"regName": "[紧抱的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-smiling-eyes-and-hand-covering-mouth_1f92d.png",
+	"name": "手捂嘴的脸",
+	"regName": "[手捂嘴的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-finger-covering-closed-lips_1f92b.png",
+	"name": "嘘声的脸",
+	"regName": "[嘘声的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/thinking-face_1f914.png",
+	"name": "思考的脸",
+	"regName": "[思考的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/zipper-mouth-face_1f910.png",
+	"name": "嘴巴上有拉链的脸",
+	"regName": "[嘴巴上有拉链的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-one-eyebrow-raised_1f928.png",
+	"name": "扬起一只眉毛的脸",
+	"regName": "[扬起一只眉毛的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/neutral-face_1f610.png",
+	"name": "平淡的脸",
+	"regName": "[平淡的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/expressionless-face_1f611.png",
+	"name": "无表情的脸",
+	"regName": "[无表情的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-without-mouth_1f636.png",
+	"name": "没有嘴的脸",
+	"regName": "[没有嘴的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smirking-face_1f60f.png",
+	"name": "歪嘴笑的脸",
+	"regName": "[歪嘴笑的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/unamused-face_1f612.png",
+	"name": "有点郁闷的脸",
+	"regName": "[有点郁闷的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-rolling-eyes_1f644.png",
+	"name": "大眼滚动的脸",
+	"regName": "[大眼滚动的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/grimacing-face_1f62c.png",
+	"name": "鬼脸",
+	"regName": "[鬼脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/lying-face_1f925.png",
+	"name": "长鼻子的脸",
+	"regName": "[长鼻子的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/relieved-face_1f60c.png",
+	"name": "松了口气的脸",
+	"regName": "[松了口气的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/pensive-face_1f614.png",
+	"name": "沉思的脸",
+	"regName": "[沉思的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/sleepy-face_1f62a.png",
+	"name": "困倦的脸",
+	"regName": "[困倦的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/drooling-face_1f924.png",
+	"name": "流着口水的脸",
+	"regName": "[流着口水的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/sleeping-face_1f634.png",
+	"name": "睡觉的脸",
+	"regName": "[睡觉的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-medical-mask_1f637.png",
+	"name": "带口罩的脸",
+	"regName": "[带口罩的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-thermometer_1f912.png",
+	"name": "嘴巴含着温度计的脸",
+	"regName": "[嘴巴含着温度计的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-head-bandage_1f915.png",
+	"name": "带头巾的脸",
+	"regName": "[带头巾的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/nauseated-face_1f922.png",
+	"name": "恶心、绿色的脸",
+	"regName": "[绿色的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-open-mouth-vomiting_1f92e.png",
+	"name": "呕吐的脸",
+	"regName": "[呕吐的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/sneezing-face_1f927.png",
+	"name": "打喷嚏的脸",
+	"regName": "[打喷嚏的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/dizzy-face_1f635.png",
+	"name": "头晕的脸",
+	"regName": "[头晕的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/shocked-face-with-exploding-head_1f92f.png",
+	"name": "冒蘑菇云的头",
+	"regName": "[冒蘑菇云的头]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-cowboy-hat_1f920.png",
+	"name": "牛仔帽脸",
+	"regName": "[牛仔帽脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-sunglasses_1f60e.png",
+	"name": "带太阳镜(墨镜)的笑脸",
+	"regName": "[带太阳镜的笑脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/nerd-face_1f913.png",
+	"name": "书呆子、戴眼镜的脸",
+	"regName": "[戴眼镜的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-monocle_1f9d0.png",
+	"name": "用放大镜的脸",
+	"regName": "[用放大镜的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/confused-face_1f615.png",
+	"name": "小郁闷的脸",
+	"regName": "[小郁闷的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/worried-face_1f61f.png",
+	"name": "担心的脸",
+	"regName": "[担心的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/slightly-frowning-face_1f641.png",
+	"name": "不高兴的脸",
+	"regName": "[不高兴的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/white-frowning-face_2639.png",
+	"name": "伤心的脸",
+	"regName": "[伤心的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-open-mouth_1f62e.png",
+	"name": "张开嘴(惊讶)的脸",
+	"regName": "[惊讶]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/hushed-face_1f62f.png",
+	"name": "小困惑的脸",
+	"regName": "[小困惑的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/astonished-face_1f632.png",
+	"name": "惊讶的脸",
+	"regName": "[惊讶的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/flushed-face_1f633.png",
+	"name": "脸红、茫然的脸",
+	"regName": "[茫然的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/frowning-face-with-open-mouth_1f626.png",
+	"name": "微微张嘴的脸",
+	"regName": "[微微张嘴的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/anguished-face_1f627.png",
+	"name": "忧虑困惑的脸",
+	"regName": "[忧虑困惑的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/fearful-face_1f628.png",
+	"name": "恐惧的脸",
+	"regName": "[恐惧的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-open-mouth-and-cold-sweat_1f630.png",
+	"name": "焦虑的脸",
+	"regName": "[焦虑的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/disappointed-but-relieved-face_1f625.png",
+	"name": "愁眉苦脸的脸",
+	"regName": "[愁眉苦脸的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/crying-face_1f622.png",
+	"name": "哭泣的脸",
+	"regName": "[哭泣的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/loudly-crying-face_1f62d.png",
+	"name": "大哭的脸",
+	"regName": "[大哭的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-screaming-in-fear_1f631.png",
+	"name": "恐惧中尖叫的脸",
+	"regName": "[恐惧中尖叫的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/confounded-face_1f616.png",
+	"name": "困惑的脸",
+	"regName": "[困惑的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/persevering-face_1f623.png",
+	"name": "挣扎的脸",
+	"regName": "[挣扎的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/disappointed-face_1f61e.png",
+	"name": "悔恨的脸",
+	"regName": "[悔恨的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-cold-sweat_1f613.png",
+	"name": "一点汗的挫折脸",
+	"regName": "[一点汗的挫折脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/weary-face_1f629.png",
+	"name": "苦恼的脸",
+	"regName": "[苦恼的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/tired-face_1f62b.png",
+	"name": "疲惫厌烦的脸",
+	"regName": "[疲惫厌烦的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/face-with-look-of-triumph_1f624.png",
+	"name": "愤怒、鼻子冒白气的脸",
+	"regName": "[鼻子冒白气的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/pouting-face_1f621.png",
+	"name": "愤怒的红脸",
+	"regName": "[愤怒的红脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/angry-face_1f620.png",
+	"name": "愤怒瞪眼的脸",
+	"regName": "[愤怒瞪眼的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/serious-face-with-symbols-covering-mouth_1f92c.png",
+	"name": "骂人说脏话的脸",
+	"regName": "[骂人说脏话的脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/smiling-face-with-horns_1f608.png",
+	"name": "恶作剧邪恶的笑脸",
+	"regName": "[恶作剧邪恶的笑脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/imp_1f47f.png",
+	"name": "生气的小怪物脸",
+	"regName": "[生气的小怪物脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/skull_1f480.png",
+	"name": "颅骨/骷髅",
+	"regName": "[骷髅]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/skull-and-crossbones_2620.png",
+	"name": "头骨和交叉骨/骷髅",
+	"regName": "[交叉骨]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/clown-face_1f921.png",
+	"name": "小丑脸",
+	"regName": "[小丑脸]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/japanese-ogre_1f479.png",
+	"name": "食人魔",
+	"regName": "[食人魔]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/japanese-goblin_1f47a.png",
+	"name": "妖精",
+	"regName": "[妖精]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/ghost_1f47b.png",
+	"name": "幽灵",
+	"regName": "[幽灵]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/extraterrestrial-alien_1f47d.png",
+	"name": "外星人",
+	"regName": "[外星人]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/see-no-evil-monkey_1f648.png",
+	"name": "捂眼睛的猴子",
+	"regName": "[捂眼睛的猴子]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/hear-no-evil-monkey_1f649.png",
+	"name": "捂耳朵的猴子",
+	"regName": "[捂耳朵的猴子]"
+}, {
+	"src": "https://emojidaquan.com/Pics/72/apple/speak-no-evil-monkey_1f64a.png",
+	"name": "捂嘴巴的猴子",
+	"regName": "[捂嘴巴的猴子]"
+}];

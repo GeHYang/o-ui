@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4168046 */
+  src: url('~@/component/o-input/font/iconfont.ttf?t=1689413524653') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiaolian:before {
+  content: "\e75a";
+}
+
+.icon-yuyin1:before {
+  content: "\e6f5";
+}
+
+.icon-cuowu:before {
+  content: "\e70e";
+}
+
+.icon-keyboard:before {
+  content: "\e661";
+}
+
+.icon-voice:before {
+  content: "\e66c";
+}
+

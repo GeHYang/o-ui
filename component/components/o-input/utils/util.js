@@ -11,8 +11,8 @@ function parseToText(html) {
   let length = imgList?.length || 0;
   html = parseEmojiName(html, imgList);
   // 2、解析用户手动输入的标签文本
-  // html = parseInTab(html);
-  // 3、解析富文本自带标签div
+  html = parseInTab(html);
+  // 3、解析富文本自带标签p
   html = parseDefaultTab(html);
   let html1 = html.replace(new RegExp(/\[[\u4e00-\u9fa5]+\]/, 'g'), '')
   let res = {
@@ -25,7 +25,7 @@ function parseEmojiName(html, emojiList) {
   try{
     for (const imgStr of emojiList) {
       let name = imgStr.match(/name=[\S\s]*\]/)[0];
-      name = name.replace("name=\"", "");
+      name = name.replace("name=", "");
       html = html.replace(imgStr, name);
     }
   } catch {}
@@ -45,12 +45,13 @@ function parseInTab(html) {
  * @param {Object} html
  */
 function parseDefaultTab(html) {
-  let reg = new RegExp("<div>", 'g');
-  let reg1 = new RegExp("</div>", 'g');
+  let reg = new RegExp("<p>", 'g');
+  let reg1 = new RegExp("</p>", 'g');
   let reg2 = new RegExp("<br?>", 'g');
   html = html.replace(reg, "");
   html = html.replace(reg1, "\n");
   html = html.replace(reg2, "");
+  html = html.substring(0, html.lastIndexOf("\n"));
   return html;
 };
 /**

@@ -1,5 +1,5 @@
 <template>
-  <view class="o-input" :style="{width: inputStyle.width}">
+  <view class="o-input" @click="editorBlur" :style="{width: inputStyle.width}">
     <view class="container" :style="{...inputStyle, width: '100%'}">
       <view class="l-prefix">
         <slot name="prefix">
@@ -10,10 +10,14 @@
       </view>
       <!-- 文本输入 -->
       <view class="in-box" v-show="preIconKey === 'voice'">
-        <!-- 输入框占位 -->
-				<view class="ql-container">
-					<o-editor @blur="editorBlur" @focus="editorFocus" @onReady="readyHandle" @input="inputText"></o-editor>
-				</view>
+        <editor id="editor" 
+          class="ql-container"
+          @ready="onEditorReady" 
+          :placeholder="placeholder"
+          @click.stop="editorFocus"
+          @input="inputText"
+          @blur="editorBlur"
+        ></editor>
         <view class="r-icon" @click.stop="showEmoji">
           <slot name="suffix">
             <view class="d-icon iconfont icon-xiaolian"></view>
@@ -62,22 +66,17 @@
 </template>
 
 <script>
-import OEditor from './o-editor/o-editor.vue';
 import oEmoji from './o-emoji/o-emoji.vue';
 import record from './utils/record';
 import { parseToText, parseToHtml } from './utils/util';
-
-plus.android.importClass("android.view.Window");
-plus.android.importClass("android.view.View");
-plus.android.importClass("android.webkit.WebView");
 export default {
-  components: { oEmoji, OEditor },
+  components: { oEmoji },
   name: "o-input",
   data() {
     return {
       showEmojiBox: false,
       inText: {},
-			insertEmojiFlag: false,
+      inFlag: false,
       preIconKey: "voice",
       sayVoice: false,
       sayVoiceMove: {
@@ -90,7 +89,6 @@ export default {
         time: 0,
         timeout: false,
       },
-			
     };
   },
   mounted(){
@@ -107,7 +105,7 @@ export default {
     },
     insertEmoji(emoji) {
       this.$emit("clickEmoji", emoji);
-      this.insertEmojiFlag = true;
+      this.showEmojiBox = false;
       this.editorCtx.insertImage({
         src: emoji.src,
         width: this.eSize,
@@ -125,24 +123,38 @@ export default {
       this.$emit("change", detail);
       this.editorCtx.clear();
     },
-    inputText(value) {
-      this.inText = parseToText(value);
-      this.$emit("input", this.inText.text);
+    inputText(e) {
+      this.getContents().then(res =>{
+        this.inText = res;
+        this.$emit("input", this.inText.text)
+      })
+    },
+    getContents(){
+      return new Promise((resolve) => {
+        this.editorCtx.getContents({
+          success: (res) => {
+            let inText = parseToText(res.html);
+            resolve(inText)
+          }
+        })
+      })
     },
     editorFocus(e){
-			if(this.insertEmojiFlag){
-				this.insertEmojiFlag = false;
-				return;
-			}
+      if(!this.resize) return;
       this.showEmojiBox = false;
     },
     editorBlur(){
-      
+      if(!this.clickBlankBlur) return;
+      this.showEmojiBox = false;
+    },
+    onEditorReady() {
+      uni.createSelectorQuery().select('#editor').context((res) => {
+        this.editorCtx = res.context
+      }).exec()
     },
     cutPreIcon(){
       let key = this.prefixIcon.filter(val => val != this.preIconKey);
       this.preIconKey = key[0];
-      this.$emit("cut-mode", key);
     },
     longtapEvent(e){
       this.sayVoiceMove.x = e.touches[0].pageY;
@@ -188,10 +200,6 @@ export default {
       this.sayVoice = false;
       this.sayVoiceMove.cancel = false;
       this.recordInterval.time = 0;
-    },
-
-    readyHandle(editor) {
-      this.editorCtx = editor;
     }
   },
   props: {
@@ -284,11 +292,8 @@ export default {
   box-sizing: border-box;
 }
 .o-input {
-  z-index: 100;
-  position: fixed;
-  bottom: 0;
-  padding: 0px 5px;
-  height: 40px;
+  padding: 5px 5px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
